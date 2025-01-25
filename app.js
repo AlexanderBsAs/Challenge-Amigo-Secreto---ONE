@@ -79,11 +79,17 @@ Obtener el nombre sorteado: Utilizar el índice aleatorio para acceder al nombre
 Mostrar el resultado: Actualizar el contenido del elemento de resultado utilizando document.getElementById()  e innerHTML para mostrar el amigo sorteado.*/
 
 function sorteoAmigos(a){
-    
-    if(amigos.length>0){
-       let aleatorio= Math.floor(Math.random()*(amigos.length))
-       let nombreSorteado= amigos[aleatorio]
 
+    //Validar que haya amigos disponibles: Antes de sortear, comprobar si el array amigos no está vacío.
+    if(amigos.length>0){
+
+        //Generar un índice aleatorio: Usar Math.random() y Math.floor() para seleccionar un índice aleatorio del arreglo.
+       let aleatorio= Math.floor(Math.random()*(amigos.length))
+
+       //Obtener el nombre sorteado: Utilizar el índice aleatorio para acceder al nombre correspondiente en el arreglo.
+       let nombreSorteado= amigos[aleatorio]
+    
+       //Mostrar el resultado: Actualizar el contenido del elemento de resultado utilizando document.getElementById()  e innerHTML para mostrar el amigo sorteado.
        let resultadoSorteo= document.getElementById("resultado")
        resultadoSorteo.innerHTML = `<li>${nombreSorteado}</li>`
        
