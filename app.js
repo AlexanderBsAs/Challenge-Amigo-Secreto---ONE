@@ -9,7 +9,7 @@ let amigos= []
 
 //IMPLEMENTA UNA FUNCIÓN PARA CREAR AMIGOS---------
 
-function crearAmigos(a){
+function agregarAmigo(a){
 /*Capturar el valor del campo de entrada: Utilizar document.getElementById o document.querySelector para obtener el texto ingresado por el usuario.*/
 
 
@@ -29,6 +29,7 @@ if(usuarioAmigo.trim()===""){
 else{
     amigos.push(usuarioAmigo.trim())
     document.getElementById("amigo").value=""
+    editarAmigos()
 }
 
 
@@ -78,7 +79,7 @@ Obtener el nombre sorteado: Utilizar el índice aleatorio para acceder al nombre
 
 Mostrar el resultado: Actualizar el contenido del elemento de resultado utilizando document.getElementById()  e innerHTML para mostrar el amigo sorteado.*/
 
-function sorteoAmigos(a){
+function sortearAmigo(a){
 
     //Validar que haya amigos disponibles: Antes de sortear, comprobar si el array amigos no está vacío.
     if(amigos.length>0){
@@ -99,3 +100,6 @@ function sorteoAmigos(a){
     }
 
 }
+
+
+
